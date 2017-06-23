@@ -6,7 +6,7 @@ from sqlalchemy import func
 from pylons.i18n import _
 from pylons import request, config, tmpl_context as c
 
-from ckan.lib.base import BaseController, render, abort, redirect
+from ckan.lib.base import BaseController, render, abort
 import ckan.lib.helpers as h
 import ckan.model as model
 import ckan.logic as logic
@@ -18,6 +18,7 @@ import ckanext.issues.model as issuemodel
 from ckanext.issues.controller import home, show
 from ckanext.issues.lib import helpers as issues_helpers
 
+redirect = toolkit.redirect_to
 log = getLogger(__name__)
 
 AUTOCOMPLETE_LIMIT = 10
